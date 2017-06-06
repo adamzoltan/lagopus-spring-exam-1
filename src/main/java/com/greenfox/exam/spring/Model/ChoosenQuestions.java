@@ -11,18 +11,20 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Answer {
-
+public class ChoosenQuestions {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
-  private String answer;
+  private long originalID;
+  private String question;
 
-  public Answer() {
+  public ChoosenQuestions() {
   }
 
-  public Answer(String answer) {
-    this.answer = answer;
-  }
 
+
+  public ChoosenQuestions(long originalID, String question) {
+    this.originalID = originalID;
+    this.question = question;
+  }
 }

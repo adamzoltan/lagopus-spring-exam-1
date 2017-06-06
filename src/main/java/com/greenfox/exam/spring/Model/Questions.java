@@ -13,6 +13,9 @@ public class Questions {
   private long id;
   private List <Question> questions;
 
+  public Questions() {
+  }
+
   public Questions(long id) {
     this.id = id;
     this.questions = new ArrayList<>();

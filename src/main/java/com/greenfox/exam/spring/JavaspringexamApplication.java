@@ -24,6 +24,8 @@ public class JavaspringexamApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		questionRepository.save(new Question("What is the color code of Green Fox?"));
+		questionRepository.save(new Question("When was Green Fox founded?(yyyy.mm.)"));
 		questionRepository.save(new Question("When did your course start? (yyyy.mm.dd)"));
 		questionRepository.save(new Question("What type of dog Barbi has?"));
 		questionRepository.save(new Question("What is HerrNorbert's favourite color?"));
@@ -32,6 +34,8 @@ public class JavaspringexamApplication implements CommandLineRunner {
 		questionRepository.save(new Question("What was the name of the first Green Fox class?"));
 		questionRepository.save(new Question("How many likes do we have on facebook?"));
 		questionRepository.save(new Question("What is Tojas's horoscope?"));
+		answerRepository.save(new Answer("#3CB879"));
+		answerRepository.save(new Answer("2015.09."));
 		answerRepository.save(new Answer("2017.03.13"));
 		answerRepository.save(new Answer("Whippet"));
 		answerRepository.save(new Answer("Green"));
