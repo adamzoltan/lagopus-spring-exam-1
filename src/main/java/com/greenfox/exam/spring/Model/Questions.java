@@ -3,6 +3,7 @@ package com.greenfox.exam.spring.Model;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -15,9 +16,12 @@ public class Questions {
   public Questions() {
   }
 
-  public Questions(long id, List<Question> questions) {
+  public Questions(long id) {
     this.id = id;
-    this.questions = questions;
+    this.questions = new ArrayList<>();
   }
 
+  public void addQuestion(Question question){
+    questions.add(question);
+  }
 }
