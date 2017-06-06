@@ -4,6 +4,7 @@ import com.greenfox.exam.spring.Model.Questions;
 import com.greenfox.exam.spring.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
