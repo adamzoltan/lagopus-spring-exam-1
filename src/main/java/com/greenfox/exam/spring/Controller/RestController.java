@@ -1,8 +1,7 @@
 package com.greenfox.exam.spring.Controller;
 
-import com.greenfox.exam.spring.Model.Question;
 import com.greenfox.exam.spring.Model.Questions;
-import com.greenfox.exam.spring.Repository.QuestionRepository;
+import com.greenfox.exam.spring.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -10,11 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RestController {
 
   @Autowired
-  QuestionRepository questionRepository;
+  QuestionService questionService;
 
   @GetMapping("/questions")
   public Questions getQuestions() {
-    Questions questions = new Questions();
+    Questions questions = new Questions(1);
+    questionService.addQuestions(questions);
     return questions;
   }
+
 }
