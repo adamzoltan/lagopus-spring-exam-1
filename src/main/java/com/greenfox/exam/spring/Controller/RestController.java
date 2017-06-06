@@ -1,9 +1,6 @@
 package com.greenfox.exam.spring.Controller;
 
-import com.greenfox.exam.spring.Model.Answer;
-import com.greenfox.exam.spring.Model.Project;
-import com.greenfox.exam.spring.Model.ProjectList;
-import com.greenfox.exam.spring.Model.Questions;
+import com.greenfox.exam.spring.Model.*;
 import com.greenfox.exam.spring.Repository.ChoosenQuestionRepository;
 import com.greenfox.exam.spring.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +25,10 @@ public class RestController {
   }
 
   @PostMapping("/answer")
-  public ProjectList postAnswers(@RequestBody Answer answer) {
+  public ProjectList postAnswers(@RequestBody Answers answers) {
     int correctAnswers = 0;
     for(int i = 1; i <=5; i++) {
-      if (choosenQuestionRepository.findOne((long) i).getQuestion().equals(answer.getAnswer())) {
+      if (choosenQuestionRepository.findOne((long) i).getQuestion().equals(answers.getAnswers().get(i))) {
         correctAnswers ++;
       }
     }
