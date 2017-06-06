@@ -105,16 +105,18 @@ Your task is to create a RESTful quiz application with full of greenfox question
 ### In what cases would you choose to use an abstract class over an interface?
 
 Please define it with your own words. We are expecting at least 3 distinct ideas that you write here:
-
+1. My endpoint has to response with an Ok or an Error status depending on the received JSON object. To solve this i can create a Status abstract class which can be extended by the ok and error status classes, so the endpoint can return with a Satus object.
+2. I want to represent several kinds of animals with my code. Since every animal has the same basic abilities (eat, sleep, move) i create an animal absctract class with these methods, then each animal can extend this. Therefore each specific animal can be instantiated as an animal object.
+3. 
 
 ### Analyzing URL
 Please name the parts of the URL below.
 [<img src="assets/URLanalysis.png" alt="parts of URL" />](assets/URLanalysis.png?raw=true)
 
-1:  
-2:  
-3:  
-4:  
-5:  
-6:  
-7:  
+1:  Protocol
+2:  Sub domain
+3:  Domain
+4:  Port number
+5:  Path
+6:  Indicates a query starts here
+7:  Query
