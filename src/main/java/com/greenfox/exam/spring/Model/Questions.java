@@ -5,10 +5,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-/**
- * Created by Adam on 2017. 06. 06..
- */
-
 @Getter
 @Setter
 public class Questions {
